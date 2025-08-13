@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Abdullahi's Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Abdullahi's Flask + Redis App!</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/count">Count</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <img src="{{ url_for('static', filename='images/welcome.png') }}" alt="Welcome Image" class="welcome-img">
+            <p class="welcome-text">
+                Hello! This web application is built with Flask and Redis. 
+                You can explore the About page to learn more or visit the Count page to see how many visitors have accessed this app! 
+                The counter demonstrates real-time data storage with Redis.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Abdullahi's Flask App</p>
+    </footer>
+</body>
+</html>

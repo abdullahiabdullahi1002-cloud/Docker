@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Abdullahi's Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>About This Web App</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/count">Count</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <p>
+                This web application is built using <strong>Flask</strong> and <strong>Redis</strong>, 
+                and is containerized with <strong>Docker</strong>. It demonstrates real-time visitor counting 
+                using Redis as a persistent storage solution.
+            </p>
+            <p>
+                I am learning how to build scalable and portable web applications using containers, 
+                and how to separate configuration from code to make apps more flexible.
+            </p>
+            <p>
+                The counter page shows how Redis can track data dynamically, while the home page 
+                provides a welcoming and aesthetic experience.
+            </p>
+            <p>
+                By using Docker Compose, we can run multiple services together, making this app easy 
+                to scale and maintain across different environments.
+            </p>
+            <p>
+                My goal with this project is to improve my DevOps skills while creating a visually 
+                pleasing and functional web application.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Abdullahi's Flask App</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count - Abdullahi's Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Visitor Counter</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/count">Count</a>
+        </nav>
+    </header>
+    <main>
+        <section class="count-section">
+            <p>Welcome to Abdullahi's Flask + Redis counter app!</p>
+            <p>Current visit count: <strong id="counter">{{ count }}</strong></p>
+        </section>
+        <script>
+            const counterElement = document.getElementById('counter');
+            let currentCount = 0;
+            const targetCount = parseInt(counterElement.innerText);
+
+            function animateCount() {
+                if (currentCount < targetCount) {
+                    currentCount++;
+                    counterElement.innerText = currentCount;
+                    requestAnimationFrame(animateCount);
+                }
+            }
+
+            animateCount();
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Abdullahi's Flask App</p>
+    </footer>
+</body>
+</html>
